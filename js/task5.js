@@ -1,11 +1,11 @@
 function bigLetter(str) {
-    let splitStr = str.toLowerCase().split(' ');
-    for (let i = 0; i < splitStr.length; i++) {
+    let strSplit = str.toLowerCase().split(' ');
+    for (let i = 0; i < strSplit.length; i++) {
     
-        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        strSplit[i] = strSplit[i].charAt(0).toUpperCase() + strSplit[i].substring(1);     
     }
    
-    return splitStr.join(' '); 
+    return strSplit.join(' '); 
  }
  
  console.log(bigLetter('mums patik saulains laiks'));

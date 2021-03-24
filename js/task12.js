@@ -1,15 +1,15 @@
 function isPerfect(number)
 {
-let temp = 0;
-   for(let i=1;i<=number/2;i++)
+let divisorSum = 0;
+   for(let i = 1;i <= number/2;i++)
      {
          if(number%i === 0)
           {
-            temp += i;
+            divisorSum += i;
           }
      }
    
-     if(temp === number && temp !== 0)
+     if(divisorSum === number && divisorSum !== 0)
         {
        console.log("It is a perfect number.");
         } 

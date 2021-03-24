@@ -1,5 +1,6 @@
 function reverseNumber(num){ 
-    return String (num)
+    return num
+    .toString()
     .split('')
     .reverse()
     .join('') 
