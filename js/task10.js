@@ -1,12 +1,4 @@
-// function matrix(n) {
-//     return Array(n).fill(Array(n).fill())
-//     .map(function (xs, i) {
-//         return xs.map(function (x, j) {
-//             return i === j ? 1 : 0;
-//         })
-//     });
-// }
-// console.log(matrix(5));
+// zimejam tabulas
 
 function matrix(n) {
     let array = [];
@@ -25,3 +17,45 @@ function matrix(n) {
 }
 const nColRows = 5;
 console.log(matrix(nColRows));
+
+/// janis
+
+
+function getIdentityMatrixAsString(number) {
+    let output = '';
+    for (let row = 0; row < number; row++) {
+        let rowString = '';
+        for (let col = 0; col < number; col++) {
+            if (col === row) {
+                rowString += '1  ';
+            } else {
+                rowString += '0  ';
+            }
+        }            
+        output += `${rowString}\n`;// lai "<br>"
+    }
+
+    return output;
+}
+
+console.log(getIdentityMatrixAsString(1));
+console.log(getIdentityMatrixAsString(10));
+
+function getIdentityMatrixAsArray(number) {
+    let outputArray = [];
+    for (let row = 0; row < number; row++) {
+        let rowArray = [];
+        for (let col = 0; col < number; col++) {
+            if (col === row) {
+                rowArray.push(1);
+            } else {
+                rowArray.push(0);
+            }
+        }            
+        outputArray.push(rowArray);
+    }
+
+    return outputArray;
+}
+console.log(getIdentityMatrixAsArray(1));
+console.log(getIdentityMatrixAsArray(10));
